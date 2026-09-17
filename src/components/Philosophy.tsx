@@ -1,17 +1,17 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import LazyImage from '@/components/LazyImage';
-import { viewportOnce } from '@/lib/animations';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import LazyImage from "@/components/LazyImage";
+import { viewportOnce } from "@/lib/animations";
 
-const words = ['Discipline', 'Consistency', 'Progression', 'Performance'];
+const words = ["Discipline", "Consistency", "Progression", "Performance"];
 
 export default function Philosophy() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%']);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
     <section
@@ -19,7 +19,10 @@ export default function Philosophy() {
       className="relative flex min-h-[90vh] items-center overflow-hidden bg-ink-950"
     >
       {/* Background */}
-      <motion.div style={{ y: imageY }} className="absolute inset-0 z-0 scale-110">
+      <motion.div
+        style={{ y: imageY }}
+        className="absolute inset-0 z-0 scale-110"
+      >
         <LazyImage
           src="https://images.pexels.com/photos/4720793/pexels-photo-4720793.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="Muscular man lifting a barbell in a gym"

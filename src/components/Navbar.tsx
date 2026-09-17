@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { trainer } from '@/data/trainer';
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { trainer } from "@/data/trainer";
 
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Programs', href: '#programs' },
-  { label: 'Credentials', href: '#credentials' },
-  { label: 'Results', href: '#results' },
-  { label: 'Contact', href: '#contact' },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Programs", href: "#programs" },
+  { label: "Certifications", href: "#credentials" },
+  { label: "Results", href: "#results" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -19,21 +19,21 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : '';
+    document.body.style.overflow = open ? "hidden" : "";
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [open]);
 
   const handleNav = (href: string) => {
     setOpen(false);
     const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -44,8 +44,8 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'border-b border-white/10 bg-ink-950/80 backdrop-blur-xl'
-            : 'border-b border-transparent bg-transparent'
+            ? "border-b border-white/10 bg-ink-950/80 backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent"
         }`}
       >
         <nav className="container-px flex h-20 items-center justify-between">
@@ -54,7 +54,7 @@ export default function Navbar() {
             href="#home"
             onClick={(e) => {
               e.preventDefault();
-              handleNav('#home');
+              handleNav("#home");
             }}
             className="group flex flex-col leading-none"
           >
@@ -89,7 +89,7 @@ export default function Navbar() {
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
-              handleNav('#contact');
+              handleNav("#contact");
             }}
             className="hidden items-center gap-1.5 rounded-full bg-lime-300 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-ink-950 transition-all hover:bg-lime-200 hover:shadow-[0_0_30px_-8px] hover:shadow-lime-300/60 lg:inline-flex"
           >
@@ -100,7 +100,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             type="button"
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
             className="relative z-50 flex h-10 w-10 items-center justify-center text-white lg:hidden"
@@ -157,7 +157,7 @@ export default function Navbar() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
-                handleNav('#contact');
+                handleNav("#contact");
               }}
               className="mb-16 flex items-center justify-center gap-2 self-center rounded-full bg-lime-300 px-8 py-4 text-sm font-bold uppercase tracking-widest text-ink-950"
             >

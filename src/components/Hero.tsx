@@ -1,8 +1,8 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { ArrowUpRight, ArrowDown, MapPin, BadgeCheck } from 'lucide-react';
-import LazyImage from '@/components/LazyImage';
-import { trainer } from '@/data/trainer';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { ArrowUpRight, ArrowDown, MapPin, BadgeCheck } from "lucide-react";
+import LazyImage from "@/components/LazyImage";
+import { trainer } from "@/data/trainer";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -19,7 +19,7 @@ export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start start', 'end start'],
+    offset: ["start start", "end start"],
   });
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.55, 0.85]);
@@ -27,10 +27,10 @@ export default function Hero() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   const scrollToPrograms = () => {
-    document.querySelector('#programs')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector("#programs")?.scrollIntoView({ behavior: "smooth" });
   };
   const scrollToContact = () => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -90,12 +90,23 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="mt-6 font-display text-[clamp(3rem,9vw,7.5rem)] uppercase leading-[0.88] tracking-tightest">
-            <motion.span custom={0} variants={line} initial="hidden" animate="visible" className="block">
+            <motion.span
+              custom={0}
+              variants={line}
+              initial="hidden"
+              animate="visible"
+              className="block"
+            >
               Build Your
             </motion.span>
-            <motion.span custom={1} variants={line} initial="hidden" animate="visible" className="block">
-              Strongest{' '}
-              <span className="text-lime-300">Self.</span>
+            <motion.span
+              custom={1}
+              variants={line}
+              initial="hidden"
+              animate="visible"
+              className="block"
+            >
+              Strongest <span className="text-lime-300">Self.</span>
             </motion.span>
           </h1>
 
@@ -176,7 +187,7 @@ export default function Hero() {
         </span>
         <motion.span
           animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
         >
           <ArrowDown className="h-4 w-4" />
         </motion.span>

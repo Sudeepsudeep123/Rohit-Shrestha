@@ -1,5 +1,5 @@
-import { useState, type FormEvent } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, type FormEvent } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -9,10 +9,10 @@ import {
   Send,
   CheckCircle2,
   Loader2,
-} from 'lucide-react';
-import SectionHeading from '@/components/SectionHeading';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
-import { trainer } from '@/data/trainer';
+} from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
+import { trainer } from "@/data/trainer";
 
 interface FormState {
   fullName: string;
@@ -24,40 +24,45 @@ interface FormState {
 }
 
 const initialForm: FormState = {
-  fullName: '',
-  phone: '',
-  email: '',
-  goal: '',
-  preferredTime: '',
-  message: '',
+  fullName: "",
+  phone: "",
+  email: "",
+  goal: "",
+  preferredTime: "",
+  message: "",
 };
 
 const goalOptions = [
-  'Strength & Muscle',
-  'Fat Loss & Conditioning',
-  'Personal Training',
-  'Functional Fitness',
+  "Strength & Muscle",
+  "Fat Loss & Conditioning",
+  "Personal Training",
+  "Functional Fitness",
 ];
 
-const timeOptions = ['Early Morning', 'Morning', 'Afternoon', 'Evening'];
+const timeOptions = ["Early Morning", "Morning", "Afternoon", "Evening"];
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>(initialForm);
-  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof FormState, string>>
+  >({});
+  const [status, setStatus] = useState<"idle" | "submitting" | "success">(
+    "idle",
+  );
 
   const validate = (): boolean => {
     const next: Partial<Record<keyof FormState, string>> = {};
-    if (!form.fullName.trim()) next.fullName = 'Please enter your full name.';
-    if (!form.phone.trim()) next.phone = 'Please enter your phone number.';
+    if (!form.fullName.trim()) next.fullName = "Please enter your full name.";
+    if (!form.phone.trim()) next.phone = "Please enter your phone number.";
     else if (!/^[+\d][\d\s-]{6,}$/.test(form.phone.trim()))
-      next.phone = 'Please enter a valid phone number.';
-    if (!form.email.trim()) next.email = 'Please enter your email.';
+      next.phone = "Please enter a valid phone number.";
+    if (!form.email.trim()) next.email = "Please enter your email.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
-      next.email = 'Please enter a valid email address.';
-    if (!form.goal) next.goal = 'Please select a fitness goal.';
-    if (!form.preferredTime) next.preferredTime = 'Please select a preferred time.';
-    if (!form.message.trim()) next.message = 'Please enter a message.';
+      next.email = "Please enter a valid email address.";
+    if (!form.goal) next.goal = "Please select a fitness goal.";
+    if (!form.preferredTime)
+      next.preferredTime = "Please select a preferred time.";
+    if (!form.message.trim()) next.message = "Please enter a message.";
     setErrors(next);
     return Object.keys(next).length === 0;
   };
@@ -65,15 +70,12 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    setStatus('submitting');
+    setStatus("submitting");
     // Simulate async submission. Replace with Formspree, EmailJS, or API later.
-    setTimeout(() => setStatus('success'), 1200);
+    setTimeout(() => setStatus("success"), 1200);
   };
 
-  const handleChange = (
-    field: keyof FormState,
-    value: string
-  ) => {
+  const handleChange = (field: keyof FormState, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
@@ -81,25 +83,27 @@ export default function Contact() {
   const reset = () => {
     setForm(initialForm);
     setErrors({});
-    setStatus('idle');
+    setStatus("idle");
   };
 
   const fieldClass = (field: keyof FormState) =>
     `w-full rounded-xl border bg-ink-800/60 px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-colors ${
       errors[field]
-        ? 'border-red-500/60 focus:border-red-400'
-        : 'border-white/10 focus:border-lime-300/60'
+        ? "border-red-500/60 focus:border-red-400"
+        : "border-white/10 focus:border-lime-300/60"
     }`;
 
   return (
-    <section id="contact" className="section-pad relative overflow-hidden bg-ink-950">
+    <section
+      id="contact"
+      className="section-pad relative overflow-hidden bg-ink-950"
+    >
       <div className="container-px">
         <SectionHeading
           eyebrow="Contact"
           title={
             <>
-              Let&apos;s Get{' '}
-              <span className="text-lime-300">Started.</span>
+              Let&apos;s Get <span className="text-lime-300">Started.</span>
             </>
           }
         />
@@ -169,7 +173,7 @@ export default function Contact() {
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a
+                {/* <a
                   href={trainer.contact.maps}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -177,7 +181,7 @@ export default function Contact() {
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-lime-300"
                 >
                   <MapPin className="h-5 w-5" />
-                </a>
+                </a> */}
               </div>
             </motion.div>
           </motion.div>
@@ -191,7 +195,7 @@ export default function Contact() {
             className="relative"
           >
             <AnimatePresence mode="wait">
-              {status === 'success' ? (
+              {status === "success" ? (
                 <motion.div
                   key="success"
                   initial={{ opacity: 0, scale: 0.96 }}
@@ -204,10 +208,14 @@ export default function Contact() {
                     Inquiry Sent
                   </h3>
                   <p className="mt-3 max-w-sm text-white/60">
-                    Thank you for reaching out. Rohit will get back to you
+                    Thank you for reaching out. Munnesh will get back to you
                     shortly to schedule your session.
                   </p>
-                  <button type="button" onClick={reset} className="btn-ghost mt-8">
+                  <button
+                    type="button"
+                    onClick={reset}
+                    className="btn-ghost mt-8"
+                  >
                     Send Another Inquiry
                   </button>
                 </motion.div>
@@ -223,108 +231,162 @@ export default function Contact() {
                 >
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="fullName" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60">
+                      <label
+                        htmlFor="fullName"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60"
+                      >
                         Full Name
                       </label>
                       <input
                         id="fullName"
                         type="text"
                         value={form.fullName}
-                        onChange={(e) => handleChange('fullName', e.target.value)}
-                        className={fieldClass('fullName')}
+                        onChange={(e) =>
+                          handleChange("fullName", e.target.value)
+                        }
+                        className={fieldClass("fullName")}
                         placeholder="Your name"
                       />
-                      {errors.fullName && <p className="mt-1.5 text-xs text-red-400">{errors.fullName}</p>}
+                      {errors.fullName && (
+                        <p className="mt-1.5 text-xs text-red-400">
+                          {errors.fullName}
+                        </p>
+                      )}
                     </div>
                     <div>
-                      <label htmlFor="phone" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60">
+                      <label
+                        htmlFor="phone"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60"
+                      >
                         Phone Number
                       </label>
                       <input
                         id="phone"
                         type="tel"
                         value={form.phone}
-                        onChange={(e) => handleChange('phone', e.target.value)}
-                        className={fieldClass('phone')}
+                        onChange={(e) => handleChange("phone", e.target.value)}
+                        className={fieldClass("phone")}
                         placeholder="+977-XXXXXXXXXX"
                       />
-                      {errors.phone && <p className="mt-1.5 text-xs text-red-400">{errors.phone}</p>}
+                      {errors.phone && (
+                        <p className="mt-1.5 text-xs text-red-400">
+                          {errors.phone}
+                        </p>
+                      )}
                     </div>
                   </div>
 
                   <div className="mt-5">
-                    <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60">
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60"
+                    >
                       Email
                     </label>
                     <input
                       id="email"
                       type="email"
                       value={form.email}
-                      onChange={(e) => handleChange('email', e.target.value)}
-                      className={fieldClass('email')}
+                      onChange={(e) => handleChange("email", e.target.value)}
+                      className={fieldClass("email")}
                       placeholder="you@example.com"
                     />
-                    {errors.email && <p className="mt-1.5 text-xs text-red-400">{errors.email}</p>}
+                    {errors.email && (
+                      <p className="mt-1.5 text-xs text-red-400">
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
 
                   <div className="mt-5 grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="goal" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60">
+                      <label
+                        htmlFor="goal"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60"
+                      >
                         Fitness Goal
                       </label>
                       <select
                         id="goal"
                         value={form.goal}
-                        onChange={(e) => handleChange('goal', e.target.value)}
-                        className={fieldClass('goal')}
+                        onChange={(e) => handleChange("goal", e.target.value)}
+                        className={fieldClass("goal")}
                       >
-                        <option value="" disabled>Select a goal</option>
+                        <option value="" disabled>
+                          Select a goal
+                        </option>
                         {goalOptions.map((g) => (
-                          <option key={g} value={g} className="bg-ink-800">{g}</option>
+                          <option key={g} value={g} className="bg-ink-800">
+                            {g}
+                          </option>
                         ))}
                       </select>
-                      {errors.goal && <p className="mt-1.5 text-xs text-red-400">{errors.goal}</p>}
+                      {errors.goal && (
+                        <p className="mt-1.5 text-xs text-red-400">
+                          {errors.goal}
+                        </p>
+                      )}
                     </div>
                     <div>
-                      <label htmlFor="preferredTime" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60">
+                      <label
+                        htmlFor="preferredTime"
+                        className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60"
+                      >
                         Preferred Training Time
                       </label>
                       <select
                         id="preferredTime"
                         value={form.preferredTime}
-                        onChange={(e) => handleChange('preferredTime', e.target.value)}
-                        className={fieldClass('preferredTime')}
+                        onChange={(e) =>
+                          handleChange("preferredTime", e.target.value)
+                        }
+                        className={fieldClass("preferredTime")}
                       >
-                        <option value="" disabled>Select a time</option>
+                        <option value="" disabled>
+                          Select a time
+                        </option>
                         {timeOptions.map((t) => (
-                          <option key={t} value={t} className="bg-ink-800">{t}</option>
+                          <option key={t} value={t} className="bg-ink-800">
+                            {t}
+                          </option>
                         ))}
                       </select>
-                      {errors.preferredTime && <p className="mt-1.5 text-xs text-red-400">{errors.preferredTime}</p>}
+                      {errors.preferredTime && (
+                        <p className="mt-1.5 text-xs text-red-400">
+                          {errors.preferredTime}
+                        </p>
+                      )}
                     </div>
                   </div>
 
                   <div className="mt-5">
-                    <label htmlFor="message" className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60">
+                    <label
+                      htmlFor="message"
+                      className="mb-2 block text-xs font-semibold uppercase tracking-widest text-white/60"
+                    >
                       Message
                     </label>
                     <textarea
                       id="message"
                       rows={4}
                       value={form.message}
-                      onChange={(e) => handleChange('message', e.target.value)}
-                      className={`${fieldClass('message')} resize-none`}
-                      placeholder="Tell Rohit about your goals and availability..."
+                      onChange={(e) => handleChange("message", e.target.value)}
+                      className={`${fieldClass("message")} resize-none`}
+                      placeholder="Tell Munnesh about your goals and availability..."
                     />
-                    {errors.message && <p className="mt-1.5 text-xs text-red-400">{errors.message}</p>}
+                    {errors.message && (
+                      <p className="mt-1.5 text-xs text-red-400">
+                        {errors.message}
+                      </p>
+                    )}
                   </div>
 
                   <button
                     type="submit"
-                    disabled={status === 'submitting'}
+                    disabled={status === "submitting"}
                     className="btn-primary group mt-7 w-full disabled:opacity-70"
                   >
-                    {status === 'submitting' ? (
+                    {status === "submitting" ? (
                       <>
                         <Loader2 className="h-4 w-4 animate-spin" />
                         Sending...
