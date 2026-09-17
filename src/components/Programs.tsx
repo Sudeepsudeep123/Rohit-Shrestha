@@ -1,13 +1,16 @@
-import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
-import SectionHeading from '@/components/SectionHeading';
-import LazyImage from '@/components/LazyImage';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
-import { programs } from '@/data/programs';
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
+import LazyImage from "@/components/LazyImage";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
+import { programs } from "@/data/programs";
 
 export default function Programs() {
   return (
-    <section id="programs" className="section-pad relative overflow-hidden bg-ink-950">
+    <section
+      id="programs"
+      className="section-pad relative overflow-hidden bg-ink-950"
+    >
       <div className="container-px">
         <SectionHeading
           eyebrow="Training Programs"
@@ -34,7 +37,7 @@ export default function Programs() {
                 key={p.id}
                 variants={fadeUp}
                 whileHover={{ y: -8 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/50"
               >
                 {/* Image */}
@@ -66,10 +69,10 @@ export default function Programs() {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-white/60">
                     {p.description}
                   </p>
-                  <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-lime-300">
+                  {/* <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-lime-300">
                     Learn More
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </div>
+                  </div> */}
                 </div>
               </motion.article>
             );
