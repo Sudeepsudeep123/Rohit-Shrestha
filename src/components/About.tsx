@@ -81,7 +81,7 @@ export default function About() {
             </div>
             {/* Floating credential chip */}
             <div className="absolute -bottom-6 -right-4 hidden rounded-2xl border border-white/10 bg-ink-800/90 px-6 py-5 backdrop-blur-md sm:block">
-              <div className="font-display text-3xl uppercase text-lime-300">
+              <div className="font-display text-3xl uppercase text-cyan-400">
                 L4
               </div>
               <div className="mt-1 text-[11px] font-semibold uppercase tracking-widest text-white/60">
@@ -106,7 +106,7 @@ export default function About() {
             >
               More Than a Trainer.
               <br />
-              Your Partner in <span className="text-lime-300">Progress.</span>
+              Your Partner in <span className="text-cyan-400">Progress.</span>
             </motion.h2>
 
             <motion.div
@@ -164,7 +164,7 @@ export default function About() {
               variants={fadeUp}
               className="flex flex-col items-center justify-center bg-ink-900/40 px-6 py-10 text-center"
             >
-              <div className="font-display text-5xl uppercase text-lime-300 sm:text-6xl">
+              <div className="font-display text-5xl uppercase text-cyan-400 sm:text-6xl">
                 {s.value === "1:1" ? (
                   "1:1"
                 ) : (

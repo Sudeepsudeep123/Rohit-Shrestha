@@ -19,17 +19,20 @@
   }
 
   ::selection {
-    background-color: #c8ff00;
+    background-color: #cc0000;
     color: #050505;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-display tracking-tighter;
   }
 
   /* Focus visibility */
   :focus-visible {
-    outline: 2px solid #c8ff00;
+    outline: 2px solid #cc0000;
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -45,7 +48,7 @@
   }
 
   .eyebrow::before {
-    content: '';
+    content: "";
     @apply h-px w-8 bg-lime-300/70;
   }
 

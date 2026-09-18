@@ -83,7 +83,7 @@ export default function Hero() {
             className="flex items-center gap-2.5"
           >
             <span className="h-px w-10 bg-lime-300" />
-            <span className="text-xs font-semibold uppercase tracking-widest2 text-lime-300">
+            <span className="text-xs font-semibold uppercase tracking-widest2 text-cyan-400">
               EREps Level-4 Certified Personal Trainer
             </span>
           </motion.div>
@@ -106,7 +106,7 @@ export default function Hero() {
               animate="visible"
               className="block"
             >
-              Strongest <span className="text-lime-300">Self.</span>
+              Strongest <span className="text-cyan-400">Self.</span>
             </motion.span>
           </h1>
 
@@ -128,7 +128,7 @@ export default function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.6 }}
             className="mt-5 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-white/60"
           >
-            <MapPin className="h-4 w-4 text-lime-300" />
+            <MapPin className="h-4 w-4 text-cyan-400" />
             {trainer.gym} • {trainer.location.area} • {trainer.location.city}
           </motion.div>
 
@@ -164,7 +164,7 @@ export default function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.85 }}
             className="mt-12 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 backdrop-blur-md"
           >
-            <BadgeCheck className="h-5 w-5 text-lime-300" />
+            <BadgeCheck className="h-5 w-5 text-cyan-400" />
             <span className="text-sm font-medium text-white/80">
               {trainer.certification.full}
             </span>
@@ -179,7 +179,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/50 transition-colors hover:text-lime-300 md:flex"
+        className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/50 transition-colors hover:text-cyan-400 md:flex"
         aria-label="Scroll to explore"
       >
         <span className="text-[10px] font-semibold uppercase tracking-widest2">
