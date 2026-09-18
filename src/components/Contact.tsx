@@ -103,7 +103,7 @@ export default function Contact() {
           eyebrow="Contact"
           title={
             <>
-              Let&apos;s Get <span className="text-lime-300">Started.</span>
+              Let&apos;s Get <span className="text-cyan-400">Started.</span>
             </>
           }
         />
@@ -120,11 +120,11 @@ export default function Contact() {
               <div className="font-display text-3xl uppercase tracking-tight text-white">
                 {trainer.name}
               </div>
-              <div className="mt-1 text-sm font-semibold uppercase tracking-widest text-lime-300">
+              <div className="mt-1 text-sm font-semibold uppercase tracking-widest text-cyan-400">
                 {trainer.profession}
               </div>
               <div className="mt-4 flex items-start gap-2 text-white/70">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-lime-300" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
                 <span>{trainer.location.full}</span>
               </div>
             </motion.div>
@@ -132,7 +132,7 @@ export default function Contact() {
             <motion.div variants={fadeUp} className="mt-8 space-y-3">
               <a
                 href={`tel:${trainer.contact.phone}`}
-                className="flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-lime-300"
+                className="flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-cyan-400"
               >
                 <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
                   <Phone className="h-4 w-4" />
@@ -141,7 +141,7 @@ export default function Contact() {
               </a>
               <a
                 href={`mailto:${trainer.contact.email}`}
-                className="flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-lime-300"
+                className="flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-cyan-400"
               >
                 <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
                   <Mail className="h-4 w-4" />
@@ -160,7 +160,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-lime-300"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-cyan-400"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
@@ -169,7 +169,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-lime-300"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-cyan-400"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
@@ -178,7 +178,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Google Maps location"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-lime-300"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-cyan-400"
                 >
                   <MapPin className="h-5 w-5" />
                 </a> */}
@@ -203,7 +203,7 @@ export default function Contact() {
                   exit={{ opacity: 0 }}
                   className="flex h-full min-h-[420px] flex-col items-center justify-center rounded-2xl border border-lime-300/30 bg-ink-800/50 p-10 text-center"
                 >
-                  <CheckCircle2 className="h-16 w-16 text-lime-300" />
+                  <CheckCircle2 className="h-16 w-16 text-cyan-400" />
                   <h3 className="mt-6 font-display text-3xl uppercase tracking-tight text-white">
                     Inquiry Sent
                   </h3>

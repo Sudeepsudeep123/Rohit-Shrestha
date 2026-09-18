@@ -17,7 +17,7 @@ export default function Credentials() {
           eyebrow="Professional Certifications"
           title={
             <>
-              Train with <span className="text-lime-300">Confidence.</span>
+              Train with <span className="text-cyan-400">Confidence.</span>
             </>
           }
         />
@@ -44,7 +44,7 @@ export default function Credentials() {
               {/* Header */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
-                  <ShieldCheck className="h-4 w-4 text-lime-300" />
+                  <ShieldCheck className="h-4 w-4 text-cyan-400" />
 
                   <span className="text-[11px] font-semibold uppercase tracking-widest text-white/70">
                     Primary Certification
@@ -57,7 +57,7 @@ export default function Credentials() {
               {/* Certification */}
               <div>
                 <div className="font-display text-[clamp(3.5rem,10vw,7rem)] uppercase leading-none tracking-tightest text-white">
-                  Level <span className="text-lime-300">4</span>
+                  Level <span className="text-cyan-400">4</span>
                 </div>
 
                 <div className="mt-2 font-display text-2xl uppercase tracking-tight text-white/90 sm:text-3xl">
@@ -71,7 +71,7 @@ export default function Credentials() {
 
               {/* Institution */}
               <div className="flex items-center gap-3 border-t border-white/10 pt-6">
-                <Award className="h-5 w-5 text-lime-300" />
+                <Award className="h-5 w-5 text-cyan-400" />
 
                 <div>
                   <div className="text-sm font-medium text-white/80">
@@ -96,7 +96,7 @@ export default function Credentials() {
             <div className="relative flex flex-col gap-6">
               <div className="flex items-center justify-between">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/10">
-                  <ShieldCheck className="h-5 w-5 text-lime-300" />
+                  <ShieldCheck className="h-5 w-5 text-cyan-400" />
                 </div>
 
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
@@ -136,7 +136,7 @@ export default function Credentials() {
             <div className="relative flex flex-col gap-6">
               <div className="flex items-center justify-between">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/10">
-                  <ShieldCheck className="h-5 w-5 text-lime-300" />
+                  <ShieldCheck className="h-5 w-5 text-cyan-400" />
                 </div>
 
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
@@ -176,7 +176,7 @@ export default function Credentials() {
             <div className="relative flex flex-col gap-6">
               <div className="flex items-center justify-between">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/10">
-                  <ShieldCheck className="h-5 w-5 text-lime-300" />
+                  <ShieldCheck className="h-5 w-5 text-cyan-400" />
                 </div>
 
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
@@ -216,7 +216,7 @@ export default function Credentials() {
             <div className="relative flex flex-col gap-6">
               <div className="flex items-center justify-between">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/10">
-                  <ShieldCheck className="h-5 w-5 text-lime-300" />
+                  <ShieldCheck className="h-5 w-5 text-cyan-400" />
                 </div>
 
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-white/40">

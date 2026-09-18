@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
-import SectionHeading from '@/components/SectionHeading';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
-import { testimonials } from '@/data/testimonials';
+import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
+import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
@@ -12,8 +12,7 @@ export default function Testimonials() {
           eyebrow="Testimonials"
           title={
             <>
-              What Clients{' '}
-              <span className="text-lime-300">Say.</span>
+              What Clients <span className="text-cyan-400">Say.</span>
             </>
           }
         />
@@ -36,7 +35,7 @@ export default function Testimonials() {
               </span>
 
               {/* Placeholder banner */}
-              <span className="mb-5 inline-flex w-fit items-center rounded-full border border-lime-300/30 bg-lime-300/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-lime-300">
+              <span className="mb-5 inline-flex w-fit items-center rounded-full border border-lime-300/30 bg-lime-300/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-cyan-400">
                 Placeholder
               </span>
 

@@ -62,7 +62,7 @@ export default function WhyTrain() {
           title={
             <>
               Your Goals.
-              <br />A <span className="text-lime-300">Smarter Plan.</span>
+              <br />A <span className="text-cyan-400">Smarter Plan.</span>
             </>
           }
         />
@@ -82,7 +82,7 @@ export default function WhyTrain() {
                 variants={fadeUp}
                 className="group relative flex flex-col gap-4 bg-ink-900/40 p-8 transition-colors duration-300 hover:bg-ink-800/50"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-lime-300 transition-colors group-hover:border-lime-300/40">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-cyan-400 transition-colors group-hover:border-lime-300/40">
                   <Icon className="h-6 w-6" />
                 </span>
                 <h3 className="font-display text-lg uppercase tracking-tight text-white">

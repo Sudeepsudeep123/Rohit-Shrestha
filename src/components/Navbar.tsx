@@ -58,7 +58,7 @@ export default function Navbar() {
             }}
             className="group flex flex-col leading-none"
           >
-            <span className="font-display text-xl uppercase tracking-tight text-white transition-colors group-hover:text-lime-300">
+            <span className="font-display text-xl uppercase tracking-tight text-white transition-colors group-hover:text-cyan-400">
               {trainer.name}
             </span>
             <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-widest2 text-white/50">
@@ -76,7 +76,7 @@ export default function Navbar() {
                     e.preventDefault();
                     handleNav(l.href);
                   }}
-                  className="relative text-sm font-medium text-white/70 transition-colors hover:text-white after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-lime-300 after:transition-all after:duration-300 hover:after:w-full"
+                  className="relative text-sm font-medium text-white/70 transition-colors hover:text-white after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {l.label}
                 </a>
@@ -91,7 +91,7 @@ export default function Navbar() {
               e.preventDefault();
               handleNav("#contact");
             }}
-            className="hidden items-center gap-1.5 rounded-full bg-lime-300 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-ink-950 transition-all hover:bg-lime-200 hover:shadow-[0_0_30px_-8px] hover:shadow-lime-300/60 lg:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full bg-cyan-400 px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-ink-950 transition-all hover:bg-cyan-300 hover:shadow-[0_0_30px_-8px] hover:shadow-cyan-400/60 lg:inline-flex"
           >
             Book a Session
             <ArrowUpRight className="h-3.5 w-3.5" />
@@ -140,7 +140,7 @@ export default function Navbar() {
                       e.preventDefault();
                       handleNav(l.href);
                     }}
-                    className="font-display text-4xl uppercase tracking-tight text-white/80 transition-colors hover:text-lime-300"
+                    className="font-display text-4xl uppercase tracking-tight text-white/80 transition-colors hover:text-cyan-400"
                   >
                     {l.label}
                   </a>
@@ -159,7 +159,7 @@ export default function Navbar() {
                 e.preventDefault();
                 handleNav("#contact");
               }}
-              className="mb-16 flex items-center justify-center gap-2 self-center rounded-full bg-lime-300 px-8 py-4 text-sm font-bold uppercase tracking-widest text-ink-950"
+              className="mb-16 flex items-center justify-center gap-2 self-center rounded-full bg-cyan-400 px-8 py-4 text-sm font-bold uppercase tracking-widest text-ink-950"
             >
               Book a Session
               <ArrowUpRight className="h-4 w-4" />

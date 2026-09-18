@@ -42,7 +42,7 @@ export default function CTA() {
         >
           Ready to Train
           <br />
-          <span className="text-lime-300">With Purpose?</span>
+          <span className="text-cyan-400">With Purpose?</span>
         </motion.h2>
 
         <motion.p
@@ -78,7 +78,7 @@ export default function CTA() {
           variants={fadeUp}
           className="mt-10 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-widest text-white/60"
         >
-          <MapPin className="h-4 w-4 text-lime-300" />
+          <MapPin className="h-4 w-4 text-cyan-400" />
           {trainer.gym} • {trainer.location.area}, {trainer.location.city}
         </motion.div>
       </motion.div>

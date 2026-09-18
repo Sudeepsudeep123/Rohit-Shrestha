@@ -1,25 +1,27 @@
-import { motion } from 'framer-motion';
-import { ImagePlus } from 'lucide-react';
-import SectionHeading from '@/components/SectionHeading';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
+import { motion } from "framer-motion";
+import { ImagePlus } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
 
 const categories = [
-  { label: 'Strength', size: 'lg:col-span-2 lg:row-span-2' },
-  { label: 'Conditioning', size: '' },
-  { label: 'Body Composition', size: '' },
-  { label: 'Performance', size: 'lg:col-span-2' },
+  { label: "Strength", size: "lg:col-span-2 lg:row-span-2" },
+  { label: "Conditioning", size: "" },
+  { label: "Body Composition", size: "" },
+  { label: "Performance", size: "lg:col-span-2" },
 ];
 
 export default function Results() {
   return (
-    <section id="results" className="section-pad relative overflow-hidden bg-ink-900">
+    <section
+      id="results"
+      className="section-pad relative overflow-hidden bg-ink-900"
+    >
       <div className="container-px">
         <SectionHeading
           eyebrow="Results & Transformations"
           title={
             <>
-              Progress You Can{' '}
-              <span className="text-lime-300">Feel.</span>
+              Progress You Can <span className="text-cyan-400">Feel.</span>
             </>
           }
         />
@@ -51,7 +53,7 @@ export default function Results() {
               {/* Placeholder pattern */}
               <div className="absolute inset-0 grid-pattern opacity-20" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <ImagePlus className="h-10 w-10 text-white/15 transition-colors group-hover:text-lime-300/40" />
+                <ImagePlus className="h-10 w-10 text-white/15 transition-colors group-hover:text-cyan-400/40" />
               </div>
               <div className="relative">
                 <span className="font-display text-2xl uppercase tracking-tight text-white">

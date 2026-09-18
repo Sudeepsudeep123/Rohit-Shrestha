@@ -42,11 +42,11 @@ export default function Footer() {
             <div className="mt-1 text-[11px] font-semibold uppercase tracking-widest text-white/50">
               {trainer.profession}
             </div>
-            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-lime-300/30 bg-lime-300/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-lime-300">
+            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-lime-300/30 bg-lime-300/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-400">
               {trainer.certification.full}
             </div>
             <div className="mt-5 flex items-start gap-2 text-sm text-white/60">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-lime-300" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" />
               {trainer.gym} • {trainer.location.area} • {trainer.location.city}
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Footer() {
                       e.preventDefault();
                       handleNav(l.href);
                     }}
-                    className="text-sm text-white/60 transition-colors hover:text-lime-300"
+                    className="text-sm text-white/60 transition-colors hover:text-cyan-400"
                   >
                     {l.label}
                   </a>
@@ -85,7 +85,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-lime-300"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-cyan-400"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -94,7 +94,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-lime-300"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-cyan-400"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -103,7 +103,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-lime-300"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-cyan-400"
               >
                 <TikTok className="h-5 w-5" />
               </a>

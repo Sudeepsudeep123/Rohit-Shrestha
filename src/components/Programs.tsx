@@ -18,7 +18,7 @@ export default function Programs() {
             <>
               Training Built
               <br />
-              For Your <span className="text-lime-300">Goals.</span>
+              For Your <span className="text-cyan-400">Goals.</span>
             </>
           }
         />
@@ -50,7 +50,7 @@ export default function Programs() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-800 via-ink-800/30 to-transparent" />
                   {/* Number */}
-                  <span className="absolute left-4 top-4 font-display text-2xl text-lime-300">
+                  <span className="absolute left-4 top-4 font-display text-2xl text-cyan-400">
                     {p.number}
                   </span>
                   {/* Icon */}
@@ -69,7 +69,7 @@ export default function Programs() {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-white/60">
                     {p.description}
                   </p>
-                  {/* <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-lime-300">
+                  {/* <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400">
                     Learn More
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div> */}

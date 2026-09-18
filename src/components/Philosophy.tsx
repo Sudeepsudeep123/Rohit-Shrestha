@@ -44,7 +44,7 @@ export default function Philosophy() {
         >
           Don&apos;t Just Work Out.
           <br />
-          <span className="text-lime-300">Train With Purpose.</span>
+          <span className="text-cyan-400">Train With Purpose.</span>
         </motion.h2>
 
         <motion.p
@@ -71,7 +71,7 @@ export default function Philosophy() {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.2 + i * 0.12,
               }}
-              className="font-display text-2xl uppercase tracking-tight text-white/40 transition-colors hover:text-lime-300 sm:text-3xl"
+              className="font-display text-2xl uppercase tracking-tight text-white/40 transition-colors hover:text-cyan-400 sm:text-3xl"
             >
               {w}
             </motion.span>

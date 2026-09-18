@@ -44,20 +44,20 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-widest2 text-lime-300;
+    @apply inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-widest2 text-cyan-400;
   }
 
   .eyebrow::before {
     content: "";
-    @apply h-px w-8 bg-lime-300/70;
+    @apply h-px w-8 bg-cyan-400/70;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-lime-300 px-7 py-3.5 text-sm font-bold uppercase tracking-widest text-ink-950 transition-all duration-300 hover:bg-lime-200 hover:shadow-[0_0_40px_-8px] hover:shadow-lime-300/60;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-7 py-3.5 text-sm font-bold uppercase tracking-widest text-ink-950 transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_40px_-8px] hover:shadow-cyan-400/60;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/[0.03] px-7 py-3.5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-sm transition-all duration-300 hover:border-lime-300/60 hover:text-lime-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/[0.03] px-7 py-3.5 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-sm transition-all duration-300 hover:border-cyan-400/60 hover:text-cyan-400;
   }
 
   .section-pad {

@@ -1,30 +1,30 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import SectionHeading from '@/components/SectionHeading';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import SectionHeading from "@/components/SectionHeading";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
 
 const steps = [
   {
-    number: '01',
-    title: 'Assess',
+    number: "01",
+    title: "Assess",
     description:
-      'Understand your current fitness level, goals, training experience, and starting point.',
+      "Understand your current fitness level, goals, training experience, and starting point.",
   },
   {
-    number: '02',
-    title: 'Plan',
-    description: 'Create a structured training approach around your goals.',
+    number: "02",
+    title: "Plan",
+    description: "Create a structured training approach around your goals.",
   },
   {
-    number: '03',
-    title: 'Train',
+    number: "03",
+    title: "Train",
     description:
-      'Execute workouts with coaching, proper technique, and progressive development.',
+      "Execute workouts with coaching, proper technique, and progressive development.",
   },
   {
-    number: '04',
-    title: 'Progress',
-    description: 'Track improvement and adjust training as needed.',
+    number: "04",
+    title: "Progress",
+    description: "Track improvement and adjust training as needed.",
   },
 ];
 
@@ -32,9 +32,9 @@ export default function TrainingProcess() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start center', 'end center'],
+    offset: ["start center", "end center"],
   });
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section className="section-pad relative overflow-hidden bg-ink-950">
@@ -45,7 +45,7 @@ export default function TrainingProcess() {
             <>
               Your Journey
               <br />
-              Starts <span className="text-lime-300">Here.</span>
+              Starts <span className="text-cyan-400">Here.</span>
             </>
           }
         />
@@ -70,7 +70,7 @@ export default function TrainingProcess() {
             {steps.map((s) => (
               <motion.div key={s.number} variants={fadeUp} className="relative">
                 <div className="mb-6 flex h-[3.25rem] items-center">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-ink-900 font-display text-lg text-lime-300">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-ink-900 font-display text-lg text-cyan-400">
                     {s.number}
                   </span>
                 </div>
@@ -100,8 +100,12 @@ export default function TrainingProcess() {
           />
           <div className="space-y-10">
             {steps.map((s) => (
-              <motion.div key={s.number} variants={fadeUp} className="relative pl-16">
-                <span className="absolute left-0 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-ink-900 font-display text-lg text-lime-300">
+              <motion.div
+                key={s.number}
+                variants={fadeUp}
+                className="relative pl-16"
+              >
+                <span className="absolute left-0 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-ink-900 font-display text-lg text-cyan-400">
                   {s.number}
                 </span>
                 <h3 className="font-display text-2xl uppercase tracking-tight text-white">
