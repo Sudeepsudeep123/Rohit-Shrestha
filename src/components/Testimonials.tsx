@@ -34,11 +34,6 @@ export default function Testimonials() {
                 <Quote className="h-10 w-10" />
               </span>
 
-              {/* Placeholder banner */}
-              <span className="mb-5 inline-flex w-fit items-center rounded-full border border-lime-300/30 bg-lime-300/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-cyan-400">
-                Placeholder
-              </span>
-
               <blockquote className="text-lg leading-relaxed text-white/70">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
@@ -54,17 +49,6 @@ export default function Testimonials() {
             </motion.figure>
           ))}
         </motion.div>
-
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          className="mt-8 text-sm text-white/40"
-        >
-          These are clearly marked placeholders. Real client testimonials will
-          be added here.
-        </motion.p>
       </div>
     </section>
   );

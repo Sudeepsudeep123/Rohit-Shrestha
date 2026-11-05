@@ -8,24 +8,27 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    id: 't1',
+    id: "t1",
     placeholder: true,
-    quote: 'Real client feedback will be added here.',
-    name: 'Client Name',
-    goal: 'Strength',
+    quote:
+      "Training with Munnesh completely changed how I approach fitness. He understands my goals, creates a plan that works for me, and keeps me motivated throughout the journey. I have become stronger, more confident, and consistent.",
+    name: "Rohit Shrestha",
+    goal: "Personalized Training",
   },
   {
-    id: 't2',
+    id: "t2",
     placeholder: true,
-    quote: 'Real client feedback will be added here.',
-    name: 'Client Name',
-    goal: 'Fitness',
+    quote:
+      "I struggled to stay consistent with my workouts before starting personal training. Munnesh made the process simple and enjoyable. The personalized workouts and continuous guidance have helped me make real progress.",
+    name: "Smrti Shrestha",
+    goal: "Weight Loss & Fitness",
   },
   {
-    id: 't3',
+    id: "t3",
     placeholder: true,
-    quote: 'Real client feedback will be added here.',
-    name: 'Client Name',
-    goal: 'Conditioning',
+    quote:
+      "What I appreciate most about Munnesh is his attention to technique and proper training. Every session has a purpose, and he pushes me to improve without compromising form. I have noticed a huge difference in my strength and overall fitness.",
+    name: "Sakar Wagle",
+    goal: "Strength & Performance",
   },
 ];

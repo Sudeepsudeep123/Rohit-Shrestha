@@ -98,7 +98,7 @@ export default function Footer() {
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a
+              {/* <a
                 href={trainer.contact.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export default function Footer() {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/70 transition-colors hover:border-lime-300/40 hover:text-cyan-400"
               >
                 <TikTok className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

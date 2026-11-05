@@ -72,7 +72,7 @@ export default function About() {
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
               <LazyImage
-                src="https://images.pexels.com/photos/30283460/pexels-photo-30283460.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                src="/assets/background.jpg"
                 alt="Athletic man demonstrating strength in a gym setting"
                 className="h-full w-full"
                 imgClassName="object-cover"

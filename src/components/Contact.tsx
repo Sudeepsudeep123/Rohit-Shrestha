@@ -69,10 +69,36 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
     if (!validate()) return;
-    setStatus("submitting");
-    // Simulate async submission. Replace with Formspree, EmailJS, or API later.
-    setTimeout(() => setStatus("success"), 1200);
+
+    const recipient = "Mun.shta@gmail.com";
+
+    const subject = `New Personal Training Inquiry - ${form.fullName}`;
+
+    const body = `
+New Training Inquiry
+
+Full Name: ${form.fullName}
+Phone: ${form.phone}
+Email: ${form.email}
+
+Fitness Goal: ${form.goal}
+Preferred Training Time: ${form.preferredTime}
+
+Message:
+${form.message}
+  `;
+
+    const gmailUrl = new URL("https://mail.google.com/mail/");
+
+    gmailUrl.searchParams.set("view", "cm");
+    gmailUrl.searchParams.set("fs", "1");
+    gmailUrl.searchParams.set("to", recipient);
+    gmailUrl.searchParams.set("su", subject);
+    gmailUrl.searchParams.set("body", body);
+
+    window.open(gmailUrl.toString(), "_blank");
   };
 
   const handleChange = (field: keyof FormState, value: string) => {
@@ -393,7 +419,7 @@ export default function Contact() {
                       </>
                     ) : (
                       <>
-                        Send Inquiry
+                        Open Mailbox
                         <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </>
                     )}
