@@ -12,7 +12,7 @@ export const testimonials: Testimonial[] = [
     placeholder: true,
     quote:
       "Training with Munnesh completely changed how I approach fitness. He understands my goals, creates a plan that works for me, and keeps me motivated throughout the journey. I have become stronger, more confident, and consistent.",
-    name: "Rohit Shrestha",
+    name: "Nirmal Kalikote",
     goal: "Personalized Training",
   },
   {
@@ -20,7 +20,7 @@ export const testimonials: Testimonial[] = [
     placeholder: true,
     quote:
       "I struggled to stay consistent with my workouts before starting personal training. Munnesh made the process simple and enjoyable. The personalized workouts and continuous guidance have helped me make real progress.",
-    name: "Smrti Shrestha",
+    name: "Meera Khadka",
     goal: "Weight Loss & Fitness",
   },
   {

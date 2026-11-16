@@ -94,7 +94,7 @@ export default function Results() {
           ))}
         </motion.div>
 
-        <motion.p
+        {/* <motion.p
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -103,7 +103,7 @@ export default function Results() {
         >
           Placeholder cards above are ready to be replaced with real client
           transformation photos.
-        </motion.p>
+        </motion.p> */}
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: "4", label: "EREPS Certification Level", suffix: "" },
+  { value: "4", label: "NASM, EREPS Certification Level", suffix: "" },
   { value: "1:1", label: "Personal Training", suffix: "" },
   { value: "100", label: "Goal Focused", suffix: "%" },
 ];
@@ -80,14 +80,14 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
             </div>
             {/* Floating credential chip */}
-            <div className="absolute -bottom-6 -right-4 hidden rounded-2xl border border-white/10 bg-ink-800/90 px-6 py-5 backdrop-blur-md sm:block">
+            {/* <div className="absolute -bottom-6 -right-4 hidden rounded-2xl border border-white/10 bg-ink-800/90 px-6 py-5 backdrop-blur-md sm:block">
               <div className="font-display text-3xl uppercase text-cyan-400">
                 L4
               </div>
               <div className="mt-1 text-[11px] font-semibold uppercase tracking-widest text-white/60">
                 EREPS Certified
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right — content */}
@@ -131,10 +131,11 @@ export default function About() {
               className="mt-8 flex flex-col gap-3 rounded-xl border-l-2 border-lime-300 bg-white/[0.03] px-5 py-4"
             >
               <div className="font-display text-xl uppercase text-white">
-                {trainer.certification.level} {trainer.certification.title}
+                NASM {trainer.certification2.title}
               </div>
-              <div className="text-sm text-white/60">
-                {trainer.certification.institution}
+
+              <div className="font-display text-xl uppercase text-white">
+                {trainer.certification.level} {trainer.certification.title}
               </div>
             </motion.div>
 

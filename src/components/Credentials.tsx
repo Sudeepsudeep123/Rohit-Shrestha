@@ -57,15 +57,15 @@ export default function Credentials() {
               {/* Certification */}
               <div>
                 <div className="font-display text-[clamp(3.5rem,10vw,7rem)] uppercase leading-none tracking-tightest text-white">
-                  Level <span className="text-cyan-400">4</span>
+                  NASM
                 </div>
 
                 <div className="mt-2 font-display text-2xl uppercase tracking-tight text-white/90 sm:text-3xl">
-                  {trainer.certification.title}
+                  {trainer.certification2.title}
                 </div>
 
                 <div className="mt-2 text-sm uppercase tracking-widest text-white/40">
-                  {trainer.certification.level}
+                  NAES - Baluwatar
                 </div>
               </div>
 
@@ -75,12 +75,12 @@ export default function Credentials() {
 
                 <div>
                   <div className="text-sm font-medium text-white/80">
-                    {trainer.certification.institution}
+                    {trainer.certification2.institution}
                   </div>
 
-                  <div className="mt-1 text-xs text-white/40">
+                  {/* <div className="mt-1 text-xs text-white/40">
                     {trainer.certification.full}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -106,21 +106,21 @@ export default function Credentials() {
 
               <div>
                 <div className="font-display text-3xl uppercase tracking-tight text-white">
-                  {trainer.certification2.level}
+                  {trainer.certification.level}
                 </div>
 
                 <div className="mt-2 text-base font-medium uppercase text-white/80">
-                  {trainer.certification2.title}
+                  {trainer.certification.title}
                 </div>
               </div>
 
               <div className="border-t border-white/10 pt-5">
                 <div className="text-sm font-medium text-white/70">
-                  {trainer.certification2.institution}
+                  {trainer.certification.institution}
                 </div>
 
                 <div className="mt-1 text-xs text-white/40">
-                  {trainer.certification2.full}
+                  {trainer.certification.full}
                 </div>
               </div>
             </div>
@@ -149,9 +149,9 @@ export default function Credentials() {
                   {trainer.certification3.level}
                 </div>
 
-                <div className="mt-2 text-base font-medium uppercase text-white/80">
+                {/* <div className="mt-2 text-base font-medium uppercase text-white/80">
                   {trainer.certification3.title}
-                </div>
+                </div> */}
               </div>
 
               <div className="border-t border-white/10 pt-5">

@@ -19,17 +19,17 @@ export const trainer = {
     full: "EREps Level-4 Certified Personal Trainer",
   },
   certification2: {
-    level: "NASM-CPT",
+    level: "NAES",
     title: "Certified Personal Trainer",
     institution: "NASM",
     full: "NASM Certified Personal Trainer",
   },
 
   certification3: {
-    level: "Function Fitness Trainer",
-    title: "Function Fitness Trainer",
-    institution: "Function Fitness",
-    full: "Certified Function Fitness Trainer",
+    level: "Functional Fitness Trainer",
+    title: "Functional Fitness Trainer",
+    institution: "NASM Functional Fitness Trainer",
+    full: "Certified Functional Fitness Trainer",
   },
 
   certification4: {

@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MapPin } from "lucide-react";
+import { Instagram, Facebook, MapPin, Heart } from "lucide-react";
 import { trainer } from "@/data/trainer";
 
 // TikTok icon — lucide-react doesn't ship one.
@@ -112,12 +112,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
-          <p className="text-xs text-white/40">
-            © 2026 {trainer.name}. All rights reserved.
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row">
+          <p className="text-sm text-muted-foreground flex items-center gap-1">
+            <Heart size={14} className="text-green-600" />
+            Crafted by{" "}
+            <a
+              href="https://clovertechnepal.com.np"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 hover:underline"
+            >
+              Clover Tech Nepal
+            </a>
           </p>
-          <p className="text-xs text-white/40">
-            {trainer.profession} • {trainer.gym} {trainer.location.area}
+
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
       </div>
