@@ -129,7 +129,7 @@ ${form.message}
           eyebrow="Connect With Me"
           title={
             <>
-              Take the First Steps.
+              Take the First Step.
               <br />
               <span className="text-lime-300">Let's Get Stronger.</span>
             </>
