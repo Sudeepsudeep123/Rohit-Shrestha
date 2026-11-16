@@ -1,30 +1,32 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import SectionHeading from '@/components/SectionHeading';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import SectionHeading from "@/components/SectionHeading";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
 
 const steps = [
   {
-    number: '01',
-    title: 'Assess',
+    number: "01",
+    title: "Discover",
     description:
-      'Understand your current fitness level, goals, training experience, and starting point.',
+      "Discuss your fitness goals, lifestyle, training experience, and expectations to understand what you want to achieve.",
   },
   {
-    number: '02',
-    title: 'Plan',
-    description: 'Create a structured training approach around your goals.',
-  },
-  {
-    number: '03',
-    title: 'Train',
+    number: "02",
+    title: "Customize",
     description:
-      'Execute workouts with coaching, proper technique, and progressive development.',
+      "Get a personalized training plan designed around your current fitness level, goals, and daily routine.",
   },
   {
-    number: '04',
-    title: 'Progress',
-    description: 'Track improvement and adjust training as needed.',
+    number: "03",
+    title: "Get Training",
+    description:
+      "Follow structured workouts with expert guidance, proper exercise techniques, and consistent coaching.",
+  },
+  {
+    number: "04",
+    title: "See Progress",
+    description:
+      "Monitor your improvements, track your performance, and adapt your training as you get stronger and fitter.",
   },
 ];
 
@@ -32,20 +34,20 @@ export default function TrainingProcess() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start center', 'end center'],
+    offset: ["start center", "end center"],
   });
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section className="section-pad relative overflow-hidden bg-ink-950">
       <div className="container-px">
         <SectionHeading
-          eyebrow="Training Process"
+          eyebrow="HOW IT WORKS"
           title={
             <>
-              Your Journey
+              From First Step
               <br />
-              Starts <span className="text-lime-300">Here.</span>
+              To <span className="text-lime-300">Real Progress.</span>
             </>
           }
         />
@@ -100,7 +102,11 @@ export default function TrainingProcess() {
           />
           <div className="space-y-10">
             {steps.map((s) => (
-              <motion.div key={s.number} variants={fadeUp} className="relative pl-16">
+              <motion.div
+                key={s.number}
+                variants={fadeUp}
+                className="relative pl-16"
+              >
                 <span className="absolute left-0 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-ink-900 font-display text-lg text-lime-300">
                   {s.number}
                 </span>

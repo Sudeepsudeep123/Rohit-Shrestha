@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   Target,
   Activity,
@@ -7,9 +7,9 @@ import {
   Gauge,
   Leaf,
   type LucideIcon,
-} from 'lucide-react';
-import SectionHeading from '@/components/SectionHeading';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
+} from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
 
 interface Feature {
   title: string;
@@ -19,37 +19,39 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    title: 'Personalized Programming',
+    title: "Training Made for You",
     description:
-      'Training structured around individual goals and current ability.',
+      "Personalized workout plans designed around your goals, fitness level, and lifestyle.",
     icon: Target,
   },
   {
-    title: 'Proper Technique',
-    description: 'Focus on controlled movement and exercise form.',
+    title: "Expert Exercise Guidance",
+    description:
+      "Learn the right techniques and movement patterns to train safely and effectively.",
     icon: Activity,
   },
   {
-    title: 'Accountability',
-    description: 'Stay consistent through structured coaching.',
+    title: "Consistency & Accountability",
+    description:
+      "Stay motivated, follow your plan, and build the discipline needed to keep progressing.",
     icon: CalendarCheck,
   },
   {
-    title: 'Progressive Training',
+    title: "Progressive Results",
     description:
-      'Train with purpose and gradually develop your capabilities.',
+      "Gradually challenge your body with structured training that develops strength and endurance.",
     icon: TrendingUp,
   },
   {
-    title: 'Performance Focus',
+    title: "Complete Fitness Development",
     description:
-      'Build strength, conditioning, mobility, and physical performance.',
+      "Improve strength, stamina, flexibility, mobility, and overall physical performance.",
     icon: Gauge,
   },
   {
-    title: 'Sustainable Progress',
+    title: "A Healthier Lifestyle",
     description:
-      'Create training habits that can realistically fit your lifestyle.',
+      "Build sustainable fitness habits that support long-term health and an active lifestyle.",
     icon: Leaf,
   },
 ];
@@ -59,12 +61,12 @@ export default function WhyTrain() {
     <section className="section-pad relative overflow-hidden bg-ink-900">
       <div className="container-px">
         <SectionHeading
-          eyebrow="Why Train With Rohit"
+          eyebrow="MY APPROACH"
           title={
             <>
-              Your Goals.
+              More Than Just
               <br />
-              A <span className="text-lime-300">Smarter Plan.</span>
+              <span className="text-lime-300">A Workout Plan.</span>
             </>
           }
         />

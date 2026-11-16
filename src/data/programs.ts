@@ -4,7 +4,7 @@ import {
   UserRound,
   Move3d,
   type LucideIcon,
-} from 'lucide-react';
+} from "lucide-react";
 
 export interface Program {
   id: string;
@@ -18,47 +18,47 @@ export interface Program {
 
 export const programs: Program[] = [
   {
-    id: 'strength',
-    number: '01',
-    title: 'Strength & Muscle',
+    id: "strength",
+    number: "01",
+    title: "Build Strength & Muscle",
     description:
-      'Build strength and muscle through structured resistance training and progressive development.',
+      "Build lean muscle, develop a stronger physique, and increase your lifting power with structured workouts and progressive strength training.",
     icon: Dumbbell,
     image:
-      'https://images.pexels.com/photos/17944268/pexels-photo-17944268.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Athlete performing a heavy barbell lift during strength training',
+      "https://images.pexels.com/photos/17944268/pexels-photo-17944268.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Athlete performing a barbell strength training exercise",
   },
   {
-    id: 'fat-loss',
-    number: '02',
-    title: 'Fat Loss & Conditioning',
+    id: "fat-loss",
+    number: "02",
+    title: "Lose Weight & Get Fit",
     description:
-      'Improve fitness, conditioning, and body composition through structured training.',
+      "Work towards your ideal body composition, burn calories, and improve stamina through effective conditioning workouts and consistent training.",
     icon: Flame,
     image:
-      'https://images.pexels.com/photos/4164658/pexels-photo-4164658.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Athlete training with battle ropes for high-intensity conditioning',
+      "https://images.pexels.com/photos/4164658/pexels-photo-4164658.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Athlete performing battle rope exercises during conditioning training",
   },
   {
-    id: 'personal',
-    number: '03',
-    title: 'Personal Training',
+    id: "personal",
+    number: "03",
+    title: "One-on-One Coaching",
     description:
-      'One-on-one coaching adapted to your goals, fitness level, training experience, and schedule.',
+      "Get dedicated personal guidance, customized workout plans, and expert support tailored to your fitness goals, experience, and lifestyle.",
     icon: UserRound,
     image:
-      'https://images.pexels.com/photos/33846716/pexels-photo-33846716.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Personal trainer guiding a client through a weight training exercise',
+      "https://images.pexels.com/photos/33846716/pexels-photo-33846716.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Personal trainer guiding a client through a strength exercise",
   },
   {
-    id: 'functional',
-    number: '04',
-    title: 'Functional Fitness',
+    id: "functional",
+    number: "04",
+    title: "Move Better. Perform Better.",
     description:
-      'Develop strength, mobility, stability, coordination, and overall physical performance.',
+      "Enhance mobility, balance, coordination, and overall athletic performance with functional exercises that build strength for everyday life.",
     icon: Move3d,
     image:
-      'https://images.pexels.com/photos/6815664/pexels-photo-6815664.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'Athlete performing a kettlebell functional fitness movement',
+      "https://images.pexels.com/photos/6815664/pexels-photo-6815664.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    alt: "Athlete performing a kettlebell functional fitness exercise",
   },
 ];

@@ -1,17 +1,22 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import LazyImage from '@/components/LazyImage';
-import { viewportOnce } from '@/lib/animations';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import LazyImage from "@/components/LazyImage";
+import { viewportOnce } from "@/lib/animations";
 
-const words = ['Discipline', 'Consistency', 'Progression', 'Performance'];
-
+const words = [
+  "DISCIPLINE",
+  "STRENGTH",
+  "CONSISTENCY",
+  "DEDICATION",
+  "PROGRESS",
+];
 export default function Philosophy() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%']);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
     <section
@@ -19,7 +24,10 @@ export default function Philosophy() {
       className="relative flex min-h-[90vh] items-center overflow-hidden bg-ink-950"
     >
       {/* Background */}
-      <motion.div style={{ y: imageY }} className="absolute inset-0 z-0 scale-110">
+      <motion.div
+        style={{ y: imageY }}
+        className="absolute inset-0 z-0 scale-110"
+      >
         <LazyImage
           src="https://images.pexels.com/photos/4720793/pexels-photo-4720793.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="Muscular man lifting a barbell in a gym"
@@ -39,9 +47,9 @@ export default function Philosophy() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-4xl font-display text-[clamp(2.5rem,7vw,6rem)] uppercase leading-[0.9] tracking-tightest"
         >
-          Don&apos;t Just Work Out.
+          Become Stronger.
           <br />
-          <span className="text-lime-300">Train With Purpose.</span>
+          <span className="text-lime-300">Become Better.</span>
         </motion.h2>
 
         <motion.p
@@ -51,8 +59,9 @@ export default function Philosophy() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           className="mt-6 max-w-xl text-lg leading-relaxed text-white/70"
         >
-          Progress comes from consistency, intelligent training, proper
-          technique, and patience.
+          Every transformation starts with a decision. Commit to your goals,
+          train with purpose, and build the stronger, healthier version of
+          yourself.
         </motion.p>
 
         {/* Animated words */}

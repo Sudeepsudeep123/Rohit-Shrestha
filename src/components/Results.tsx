@@ -1,25 +1,30 @@
-import { motion } from 'framer-motion';
-import { ImagePlus } from 'lucide-react';
-import SectionHeading from '@/components/SectionHeading';
-import { fadeUp, staggerParent, viewportOnce } from '@/lib/animations';
+import { motion } from "framer-motion";
+import { ImagePlus } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
+import { fadeUp, staggerParent, viewportOnce } from "@/lib/animations";
 
 const categories = [
-  { label: 'Strength', size: 'lg:col-span-2 lg:row-span-2' },
-  { label: 'Conditioning', size: '' },
-  { label: 'Body Composition', size: '' },
-  { label: 'Performance', size: 'lg:col-span-2' },
+  { label: "Strength & Muscle Growth", size: "lg:col-span-2" },
+  { label: "Weight Loss Journey", size: "" },
+  { label: "Fitness Transformation", size: "" },
+  { label: "Improved Performance", size: "" },
+  { label: "Building a Healthier Lifestyle", size: "lg:col-span-2" },
 ];
 
 export default function Results() {
   return (
-    <section id="results" className="section-pad relative overflow-hidden bg-ink-900">
+    <section
+      id="results"
+      className="section-pad relative overflow-hidden bg-ink-900"
+    >
       <div className="container-px">
         <SectionHeading
-          eyebrow="Results & Transformations"
+          eyebrow="REAL GOALS. REAL PROGRESS."
           title={
             <>
-              Progress You Can{' '}
-              <span className="text-lime-300">Feel.</span>
+              Every Journey.
+              <br />
+              <span className="text-lime-300">A Stronger You.</span>
             </>
           }
         />
@@ -31,8 +36,9 @@ export default function Results() {
           viewport={viewportOnce}
           className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70"
         >
-          Real progress takes consistency. Every training approach should be
-          adapted to the individual.
+          Every fitness journey is different. With the right guidance,
+          consistent effort, and a plan built around your goals, meaningful
+          progress is within reach.
         </motion.p>
 
         <motion.div
@@ -64,17 +70,6 @@ export default function Results() {
             </motion.div>
           ))}
         </motion.div>
-
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          className="mt-8 text-sm text-white/40"
-        >
-          Placeholder cards above are ready to be replaced with real client
-          transformation photos.
-        </motion.p>
       </div>
     </section>
   );

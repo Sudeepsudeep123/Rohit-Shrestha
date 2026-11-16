@@ -1,8 +1,8 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { ArrowUpRight, ArrowDown, MapPin, BadgeCheck } from 'lucide-react';
-import LazyImage from '@/components/LazyImage';
-import { trainer } from '@/data/trainer';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { ArrowUpRight, ArrowDown, MapPin, BadgeCheck } from "lucide-react";
+import LazyImage from "@/components/LazyImage";
+import { trainer } from "@/data/trainer";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -19,7 +19,7 @@ export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start start', 'end start'],
+    offset: ["start start", "end start"],
   });
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.55, 0.85]);
@@ -27,10 +27,10 @@ export default function Hero() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   const scrollToPrograms = () => {
-    document.querySelector('#programs')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector("#programs")?.scrollIntoView({ behavior: "smooth" });
   };
   const scrollToContact = () => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -46,7 +46,7 @@ export default function Hero() {
       >
         <LazyImage
           src="https://images.pexels.com/photos/17201699/pexels-photo-17201699.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          alt="Focused male athlete leaning on a barbell in a dimly lit gym"
+          alt="Athlete training in a gym"
           className="h-full w-full"
           imgClassName="object-cover"
           loading="eager"
@@ -65,7 +65,7 @@ export default function Hero() {
       {/* Decorative side text */}
       <div className="absolute right-6 top-1/2 z-10 hidden -translate-y-1/2 rotate-90 xl:block">
         <span className="text-[10px] font-semibold uppercase tracking-widest2 text-white/30">
-          Strength / Discipline / Progression
+          Strength / Fitness / Transformation
         </span>
       </div>
 
@@ -90,12 +90,23 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="mt-6 font-display text-[clamp(3rem,9vw,7.5rem)] uppercase leading-[0.88] tracking-tightest">
-            <motion.span custom={0} variants={line} initial="hidden" animate="visible" className="block">
-              Build Your
+            <motion.span
+              custom={0}
+              variants={line}
+              initial="hidden"
+              animate="visible"
+              className="block"
+            >
+              Push Limits.
             </motion.span>
-            <motion.span custom={1} variants={line} initial="hidden" animate="visible" className="block">
-              Strongest{' '}
-              <span className="text-lime-300">Self.</span>
+            <motion.span
+              custom={1}
+              variants={line}
+              initial="hidden"
+              animate="visible"
+              className="block"
+            >
+              Build <span className="text-lime-300">Greatness.</span>
             </motion.span>
           </h1>
 
@@ -106,8 +117,8 @@ export default function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.5 }}
             className="mt-7 max-w-xl text-lg leading-relaxed text-white/70"
           >
-            Personal training built around your goals, your body, and your
-            lifestyle.
+            Personalized fitness coaching designed to help you build strength,
+            improve performance, and achieve lasting results.
           </motion.p>
 
           {/* Location */}
@@ -133,7 +144,7 @@ export default function Hero() {
               onClick={scrollToContact}
               className="btn-primary group"
             >
-              Book a Personal Training Session
+              Start Your Fitness Journey
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
             <button
@@ -141,7 +152,7 @@ export default function Hero() {
               onClick={scrollToPrograms}
               className="btn-ghost group"
             >
-              Explore Training
+              Explore Training Programs
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
           </motion.div>
@@ -172,11 +183,11 @@ export default function Hero() {
         aria-label="Scroll to explore"
       >
         <span className="text-[10px] font-semibold uppercase tracking-widest2">
-          Scroll
+          Scroll to Explore
         </span>
         <motion.span
           animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
         >
           <ArrowDown className="h-4 w-4" />
         </motion.span>
